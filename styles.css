@@ -1,0 +1,510 @@
+/* styles.css - HomeFactory landing styles
+   Mobile-first, responsive, warm palette.
+*/
+
+/* ---------- VARIABLES ---------- */
+:root{
+  --bg: #F7F5F0;
+  --card: #FFFFFF;
+  --accent: #2E7A6B;
+  --accent-2: #F2C57C;
+  --muted: #6B6B6B;
+  --text: #122;
+  --radius: 12px;
+  --container: 1080px;
+  --shadow: 0 8px 28px rgba(17,17,17,0.06);
+  --glass: rgba(255,255,255,0.6);
+}
+.task-img {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  display: block;
+  border-radius: 10px;
+}
+
+
+/* ---------- RESET & BASE ---------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg),#fff 70%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+/* Horizontal scroll for task cards */
+.scroll-x {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+
+
+.scroll-x .task-card {
+  min-width: 280px;
+  scroll-snap-align: start;
+}
+
+.scroll-x::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-x::-webkit-scrollbar-thumb {
+  background: #d4ccc2;
+  border-radius: 4px;
+}
+
+/* container */
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 18px;
+}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+  background:rgba(255,255,255,0.8);
+  border-bottom:1px solid rgba(16,16,16,0.04);
+}
+.nav-inner{
+  max-width:var(--container);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:12px 18px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--accent)}
+.brand-logo{border-radius:8px}
+.brand-name{font-weight:700;letter-spacing:0.2px}
+
+.main-nav{
+  margin-left:18px;
+  display:none;
+  gap:18px;
+}
+.main-nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px}
+.nav-cta{margin-left:auto;display:flex;align-items:center;gap:8px}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;font-weight:600;text-decoration:none;cursor:pointer;border:0;
+}
+.btn.small{padding:6px 8px;font-size:13px}
+.btn-primary{
+  background:var(--accent);color:#fff;box-shadow: 0 6px 20px rgba(46,122,107,0.14);
+}
+.btn-outline{
+  background:transparent;border:1px solid rgba(16,16,16,0.06);color:var(--text);
+}
+.btn-secondary{
+  background:var(--accent-2);color:#1b1b1b;
+}
+.nav-toggle{
+  background:transparent;border:0;font-size:18px;padding:8px;display:inline-block;
+}
+
+/* ---------- HERO ---------- */
+.hero{padding:28px 0 18px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+.hero-left{padding:12px}
+.hero-title{font-size:28px;margin:0 0 10px;line-height:1.05;color:var(--accent)}
+.hero-sub{margin:0 0 14px;color:var(--muted)}
+.hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.hero-features{display:flex;gap:12px;list-style:none;padding:0;margin:0;color:var(--muted);font-weight:600}
+.hero-features li{font-size:14px;background:rgba(46,122,107,0.06);padding:6px 8px;border-radius:999px}
+
+/* illustration */
+.illustration-card {
+  width: 400px;
+  height: 360px;     /* slightly taller to fit caption */
+  border-radius: 20px;
+  background: #FFF8F0;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-illustration {
+  width: 100%;
+  height: 300px;     /* fits SVG height area */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.illustration-caption {
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+
+
+/* ---------- STATS ---------- */
+.stats{padding:18px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.stat{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow);text-align:center}
+.stat-number{font-size:20px;font-weight:800;color:var(--accent)}
+.stat-label{font-size:13px;color:var(--muted)}
+
+/* ---------- MARKETPLACE ---------- */
+.marketplace{padding:18px 0}
+.section-head{margin-bottom:12px}
+.section-head h2{margin:0 0 6px}
+.muted{color:var(--muted)}
+.task-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.task-card{display:flex;flex-direction:column;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+/* .task-card img{width:100%;height:150px;object-fit:cover;display:block} */
+.task-body{padding:12px}
+.task-body h3{margin:0 0 8px}
+.task-meta{display:flex;gap:12px;color:var(--muted);font-weight:700;margin-bottom:8px;font-size:13px}
+.task-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.center{text-align:center;margin-top:12px}
+
+/* ---------- HOW IT WORKS ---------- */
+.howitworks{padding:18px 0}
+.steps-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.step{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow)}
+.step-num{width:40px;height:40px;border-radius:999px;background:linear-gradient(180deg,var(--accent),#246253);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
+
+/* ---------- TRAINING ---------- */
+.training{padding:18px 0}
+.training-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.training-card{display:flex;gap:12px;align-items:center;padding:12px;background:var(--card);border-radius:10px;box-shadow:var(--shadow)}
+.thumb{width:44px;height:44px;border-radius:8px;background:var(--accent-2);display:flex;align-items:center;justify-content:center;font-weight:800}
+
+/* ---------- DASHBOARD PREVIEW ---------- */
+.dashboard-preview{padding:18px 0}
+.dashboard-card{background:linear-gradient(180deg,#fff,#FBFFF9);border-radius:14px;padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.dash-header h3{margin:0}
+.earnings{font-weight:800}
+.earnings-number{font-size:20px}
+.members{display:flex;gap:12px;margin-top:8px}
+.member{display:flex;gap:8px;align-items:center}
+.avatar{width:40px;height:40px;background:var(--accent);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700}
+
+/* ---------- TESTIMONIALS ---------- */
+/* ---------- NEW PRO TESTIMONIALS ---------- */
+
+.testimonial-pro-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.testimonial-pro {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.testimonial-pro:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.testi-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.testimonial-pro h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.testimonial-pro p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Desktop layout */
+@media (min-width: 700px) {
+  .testimonial-pro-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ---------- FOOTER ---------- */
+/* ---------- NEW PREMIUM FOOTER ---------- */
+
+.site-footer {
+  padding: 40px 0 20px;
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: 40px;
+}
+
+.new-footer-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr;
+}
+
+.footer-col h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+  padding-left: 4px;
+}
+
+.footer-col p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-buttons a {
+  width: 34px;
+  height: 34px;
+  background: rgba(46,122,107,0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.social-buttons a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 16px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Desktop layout */
+@media (min-width: 800px) {
+  .new-footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+
+/* ---------- RESPONSIVE LAYOUT (larger screens) ---------- */
+@media(min-width:700px){
+  .main-nav{display:flex}
+  .nav-toggle{display:none}
+  .hero-grid{grid-template-columns:1fr 420px;align-items:center}
+  .stat-grid{grid-template-columns:repeat(4,1fr)}
+  .task-grid{grid-template-columns:repeat(3,1fr)}
+  .steps-grid{grid-template-columns:repeat(5,1fr)}
+  .training-grid{grid-template-columns:repeat(3,1fr)}
+  .testimonial-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}
+}
+
+/* open nav on mobile */
+.main-nav.open{
+  position:absolute;
+  left:16px;
+  right:16px;
+  top:64px;
+  background:var(--card);
+  border-radius:10px;
+  box-shadow:var(--shadow);
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* small helper classes */
+.small{font-size:13px;padding:6px 10px}
+.center{text-align:center}
+.muted.small{font-size:13px}
+
+/* subtle hover effects */
+.task-card:hover{transform:translateY(-6px);transition:transform .25s ease}
+.btn{transition:transform .12s ease, box-shadow .12s ease}
+.btn:hover{transform:translateY(-3px)}
+
+/* accessibility improvements */
+a:focus, button:focus {outline:3px solid rgba(46,122,107,0.12);outline-offset:3px}
+
+/* ---------- AUTH PAGE (LOGIN) ---------- */
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin: 0 0 8px;
+  color: var(--accent);
+}
+
+.auth-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(16,16,16,0.1);
+  font-size: 15px;
+}
+/* ---------- HOW IT WORKS PAGE ---------- */
+
+.howit-page {
+  padding: 40px 0;
+}
+
+.howit-page h1 {
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.howit-steps {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.how-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.how-card h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+  
+@media (min-width: 700px) {
+  .howit-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.auth-form label {
+  text-align: left;
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+/* --- Success Popup for Redirect --- */
+.redirect-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: var(--card);
+  padding: 24px 30px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.35s ease;
+  z-index: 9999;
+}
+
+.redirect-popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.redirect-popup h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.redirect-popup p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+/* FIX: Ensure task images resize properly */
+.task-card .task-img {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+}

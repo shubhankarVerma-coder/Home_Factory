@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HomeFactory — Turn Your Home Into Work</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Meta for theme color -->
+  <meta name="theme-color" content="#F4EFE7">
+</head>
+<body>
+  <!-- SITE CONTAINER -->
+  <div class="site">
+
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#">
+          <!-- Inline simple logo (home + gear) -->
+          <svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true">
+            <path fill="#2E7A6B" d="M32 6l18 12v30a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V18L32 6z"/>
+            <path fill="#F2C57C" d="M40 36a8 8 0 1 1-8-8 8 8 0 0 1 8 8z"/>
+            <path fill="#2E7A6B" d="M40 34.5a5.5 5.5 0 1 0-5.5-5.5 5.5 5.5 0 0 0 5.5 5.5z" opacity="0.25"/>
+          </svg>
+          <span class="brand-name">HomeFactory</span>
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+          <a href="#howitworks">How it works</a>
+          <a href="#tasks">Find Tasks</a>
+          <a href="partners.html">Become a Partner</a>
+          <a href="#community">Community</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-outline" href="login.html">Login</a>
+
+          <a class="btn btn-primary" href="signup.html">Get Started</a>
+
+          <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h1 class="hero-title">Turn your home into a workspace.</h1>
+          <p class="hero-sub">Earn from home with simple, family-friendly tasks delivered to your doorstep — no commute, no experience required.</p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#tasks">Find Tasks Near Me</a>
+            <a class="btn btn-outline" href="how-it-works.html">How it works</a>
+
+          </div>
+
+          <ul class="hero-features">
+            <li>Doorstep materials & pickup</li>
+            <li>Instant payments via UPI/bank transfer</li>
+            <li>Short training videos — quick to start</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <!-- Illustration box - placeholder -->
+          <div class="illustration-card">
+             
+            <!-- Simple decorative SVG -->
+             <img src="bg.jpg" alt="Family working together on small tasks" class="hero-illustration">
+              <p class="illustration-caption">Families working together — small tasks, steady income.</p>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="container">
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat-number" data-target="12000">12,000</div>
+            <div class="stat-label">Families empowered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="300">300</div>
+            <div class="stat-label">Partner brands</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="18">18</div>
+            <div class="stat-label">States covered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="200000000">20,00,00,000</div>
+            <div class="stat-label">Total payouts (₹)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETPLACE PREVIEW -->
+    <section class="marketplace" id="tasks">
+      <div class="container">
+        <div class="section-head">
+          <h2>Tasks you can do from home</h2>
+          <p class="muted">Pick easy tasks, check payment, and start earning within a day.</p>
+        </div>
+
+       <div class="task-grid scroll-x" 
+     style="display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:10px; white-space:nowrap; scroll-behavior:smooth;">
+
+  <!-- CARD 1 – Handmade Craft -->
+  <article class="task-card" style="flex:0 0 auto; scroll-snap-align:start;">
+    <img class="task-img" src="hc.jpg" alt="Person making handmade paper flowers at home">
+    <div class="task-body">
+      <h3>Handmade craft work</h3>
+      <div class="task-meta">
+        <span>₹3 – ₹10 / piece</span>
+        <span>Creative • Flexible hours</span>
+      </div>
+      <p class="muted small">Create simple handmade items like flowers, decorations, and DIY kits.</p>
+      <div class="task-actions">
+        <a class="btn btn-outline small" href="#">Details</a>
+        <a class="btn btn-primary small" href="#">Accept Task</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CARD 2 – Tiffin Service -->
+  <article class="task-card" style="flex:0 0 auto; scroll-snap-align:start;">
+    <img class="task-img" src="tiffin.jpg" alt="Hand holding a stainless steel tiffin carrier">
+    <div class="task-body">
+      <h3>Tiffin / Home Cooking Service</h3>
+      <div class="task-meta">
+        <span>₹50 – ₹120 / tiffin</span>
+        <span>Cooking • Daily order</span>
+      </div>
+      <p class="muted small">Prepare fresh meals for office workers & students.</p>
+      <div class="task-actions">
+        <a class="btn btn-outline small" href="#">Details</a>
+        <a class="btn btn-primary small" href="#">Accept Task</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CARD 3 – Sewing / Stitching Work -->
+  <article class="task-card" style="flex:0 0 auto; scroll-snap-align:start;">
+    <img class="task-img" src="sew.jpg" alt="Person stitching cloth on a sewing machine">
+    <div class="task-body">
+      <h3>Sewing / Stitching Work</h3>
+      <div class="task-meta">
+        <span>₹8 – ₹20 / piece</span>
+        <span>Skilled • Flexible hours</span>
+      </div>
+      <p class="muted small">Basic stitching of cloth items. Machine required.</p>
+      <div class="task-actions">
+        <a class="btn btn-outline small" href="#">Details</a>
+        <a class="btn btn-primary small" href="#">Accept Task</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CARD 4 – Gift Hamper Packing -->
+  <article class="task-card" style="flex:0 0 auto; scroll-snap-align:start;">
+    <img class="task-img" src="gift.jpg" alt="Hands decorating a gift box with ribbon and bow">
+    <div class="task-body">
+      <h3>Gift hamper packing</h3>
+      <div class="task-meta">
+        <span>₹25 / unit</span>
+        <span>Medium • 2–4 hrs/day</span>
+      </div>
+      <p class="muted small">Assemble and wrap small gift sets. Pickup available.</p>
+      <div class="task-actions">
+        <a class="btn btn-outline small" href="#">Details</a>
+        <a class="btn btn-primary small" href="#">Accept Task</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CARD 5 – Sticker Labeling -->
+  <article class="task-card" style="flex:0 0 auto; scroll-snap-align:start;">
+    <img class="task-img" src="st.jpg" alt="Hands placing a label on a cardboard box">
+    <div class="task-body">
+      <h3>Sticker labeling</h3>
+      <div class="task-meta">
+        <span>₹2 / piece</span>
+        <span>Easy • 1–2 hrs/day</span>
+      </div>
+      <p class="muted small">Label products neatly. Training video included.</p>
+      <div class="task-actions">
+        <a class="btn btn-outline small" href="#">Details</a>
+        <a class="btn btn-primary small" href="#">Accept Task</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CARD 6 – Thread Trimming -->
+  <article class="task-card" style="flex:0 0 auto; scroll-snap-align:start;">
+    <img class="task-img" src="WhatsApp Image 2025-12-05 at 22.49.10_801ae7c0.jpg" alt="Close-up of hands trimming extra thread on fabric">
+    <div class="task-body">
+      <h3>Thread trimming</h3>
+      <div class="task-meta">
+        <span>₹0.5 / piece</span>
+        <span>Easy • Flexible</span>
+      </div>
+      <p class="muted small">Quick, repetitive task ideal for family teamwork.</p>
+      <div class="task-actions">
+        <a class="btn btn-outline small" href="#">Details</a>
+        <a class="btn btn-primary small" href="#">Accept Task</a>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+
+
+
+        <div class="center">
+          <a class="btn btn-secondary" href="#tasks">Browse All Tasks</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="howitworks" id="howitworks">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p class="muted">Simple steps — materials at home, work at home, pickup & pay.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h4>Sign up</h4>
+            <p class="muted small">Quick OTP login. Choose language and working hours.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h4>Choose a task</h4>
+            <p class="muted small">See pay per unit, time, and required skills.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h4>Receive materials</h4>
+            <p class="muted small">Doorstep delivery with easy checklist and short video.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">4</div>
+            <h4>Work & submit</h4>
+            <p class="muted small">Work at your pace; schedule pickup when done.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">5</div>
+            <h4>Get paid</h4>
+            <p class="muted small">Instant payment to bank/UPI after QC.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING LIBRARY -->
+    <section class="training">
+      <div class="container">
+        <div class="section-head">
+          <h2>Quick training videos</h2>
+          <p class="muted">Short, snackable lessons to get you started within minutes.</p>
+        </div>
+
+        <div class="training-grid">
+          <article class="training-card">
+            <div class="thumb">▶</div>
+            <h4>Packing basics — 30s</h4>
+            <p class="muted small">Neat folding + tape tips.</p>
+          </article>
+
+          <article class="training-card">
+            <div class="thumb">▶</div>
+            <h4>Labeling perfectly — 20s</h4>
+            <p class="muted small">Avoid mistakes that cause rework.</p>
+          </article>
+
+          <article class="training-card">
+            <div class="thumb">▶</div>
+            <h4>Quality checks 101 — 40s</h4>
+            <p class="muted small">Simple QC you can do at home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILY DASHBOARD PREVIEW -->
+    <!-- <section class="dashboard-preview">
+      <div class="container">
+        <div class="dashboard-card">
+          <div class="dash-header">
+            <h3>Family Dashboard</h3>
+            <p class="muted small">Track earnings, members, and streaks.</p>
+          </div>
+
+          <div class="dash-body">
+            <div class="earnings">
+              <div class="earnings-number">₹ <span>7,350</span></div>
+              <div class="earnings-label">Earnings this month</div>
+            </div>
+
+            <div class="members">
+              <div class="member">
+                <div class="avatar">M</div>
+                <div><strong>Meera</strong><div class="muted small">Top performer</div></div>
+              </div>
+              <div class="member">
+                <div class="avatar">R</div>
+                <div><strong>Raju</strong><div class="muted small">3 tasks today</div></div>
+              </div>
+              <div class="member">
+                <div class="avatar">A</div>
+                <div><strong>Asha</strong><div class="muted small">Joined 2 days ago</div></div>
+              </div>
+            </div>
+
+            <div class="dash-actions">
+              <a class="btn btn-outline small" href="#training">Training</a>
+              <a class="btn btn-primary small" href="#tasks">Take a Task</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- TESTIMONIAL / COMMUNITY SKELETON -->
+    <section class="testimonials" id="community">
+  <div class="container">
+    <div class="section-head">
+      <h2>Community Stories</h2>
+      <p class="muted">Real families creating real income at home.</p>
+    </div>
+
+    <div class="testimonial-pro-grid">
+
+      <!-- CARD 1 -->
+      <div class="testimonial-pro">
+        <img src="pr.jpeg" alt="Priya" class="testi-avatar">
+        <h4>Priya • Uttar Pradesh</h4>
+        <p>“I earned ₹5,000 while looking after my kids. HomeFactory completely changed how we manage our household income.”</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="testimonial-pro">
+        <img src="ar.jpeg" alt="Ramesh" class="testi-avatar">
+        <h4>Ramesh • Maharashtra</h4>
+        <p>“We finished packing orders after dinner. Pickup came next morning and payment arrived instantly. Super convenient!”</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="testimonial-pro">
+        <img src="ro.jpeg" alt="Asha" class="testi-avatar">
+        <h4>Asha • Karnataka</h4>
+        <p>“Thanks to stitching tasks, I now earn from home while caring for my elderly parents. The flexibility is unmatched.”</p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="testimonial-pro">
+        <img src="roh.jpeg" alt="Farhan" class="testi-avatar">
+        <h4>Farhan • Delhi</h4>
+        <p>“Thread trimming tasks helped my family earn a stable side income. The training videos made everything easy to learn.”</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+  <div class="container new-footer-grid">
+
+    <!-- ABOUT -->
+    <div class="footer-col">
+      <h4>About HomeFactory</h4>
+      <p class="muted small">
+        A decentralized home-based workforce platform helping families earn
+        dignified income through simple, flexible work from home.
+      </p>
+    </div>
+
+    <!-- PARTNERS -->
+    <div class="footer-col">
+      <h4>For Partners</h4>
+      <ul>
+        <li><a href="partners.html">Partner With Us</a></li>
+        <li><a href="#">Logistics & Fulfillment</a></li>
+        <li><a href="#">Quality & Compliance</a></li>
+        <li><a href="#">Bulk Order Programs</a></li>
+      </ul>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="faq.html">Help Center</a></li>
+        <li><a href="contact.html">Contact Support</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Create Account</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <p class="muted small">
+        hello@homefactory.example<br />
+        +91 90000 00000
+      </p>
+
+      <div class="social-buttons">
+        <a href="#" aria-label="facebook">FB</a>
+        <a href="#" aria-label="instagram">IG</a>
+        <a href="#" aria-label="youtube">YT</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <small>© 2025 HomeFactory — Empowering families with dignified work</small>
+  </div>
+</footer>
+
+  </div>
+
+  <!-- Tiny JS for nav toggle + counter animation -->
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle && navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+
+    // Simple counter animation when element enters viewport
+    // function animateCounters() {
+    //   const counters = document.querySelectorAll('.stat-number');
+    //   const speed = 200; // smaller = faster
+
+    //   counters.forEach(counter => {
+    //     const target = +counter.getAttribute('data-target');
+    //     const start = +counter.innerText.replace(/,/g,'') || 0;
+    //     let current = start;
+    //     const step = Math.ceil(target / speed);
+
+    //     function update() {
+    //       current += step;
+    //       if (current >= target) {
+    //         counter.innerText = Intl.NumberFormat('en-IN').format(target);
+    //       } else {
+    //         counter.innerText = Intl.NumberFormat('en-IN').format(current);
+    //         requestAnimationFrame(update);
+    //       }
+    //     }
+    //     update();
+    //   });
+    // }
+
+    // Observe stats section
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+      const obs = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect();
+          }
+        });
+      }, {threshold: 0.4});
+      obs.observe(statsSection);
+    }
+  </script>
+</body>
+</html>

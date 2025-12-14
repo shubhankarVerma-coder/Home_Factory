@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up • HomeFactory</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Create Your Account</h2>
+      <p class="muted small">Join thousands of families earning from home</p>
+
+      <form class="auth-form">
+        
+        <label>Name</label>
+        <input type="text" placeholder="Your full name">
+
+        <label>Mobile Number</label>
+        <input type="text" placeholder="Enter your phone number">
+
+        <label>Create Password</label>
+        <input type="password" placeholder="Choose a password">
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Re-enter your password">
+
+      <button class="btn btn-primary" type="button" onclick="signupRedirect()">Create Account</button>
+
+
+
+        <p class="small muted" style="margin-top:12px;">
+          Already have an account?
+          <a href="login.html" style="color:var(--accent); font-weight:600;">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <div id="redirectPopup" class="redirect-popup">
+  <h3>Success!</h3>
+  <p>Redirecting in <span id="countdown">3</span> seconds…</p>
+</div>
+
+  <script>
+
+function signupRedirect() {
+  const popup = document.getElementById("redirectPopup");
+  const counter = document.getElementById("countdown");
+
+  popup.classList.add("show");
+
+  let timeLeft = 3;
+  const timer = setInterval(() => {
+    timeLeft--;
+    counter.textContent = timeLeft;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      window.location.href = "login.html";
+    }
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
